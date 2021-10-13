@@ -1,0 +1,28 @@
+module testbench;
+	--SWITCH
+	reg [9:0] SW;
+	--DISPLAY 7SEG
+	wire [6:0] HEX0;
+	wire [6:0] HEX1;
+	wire [6:0] HEX2;
+	wire [6:0] HEX3;
+	wire [6:0] HEX4;
+	wire [6:0] HEX5;
+	--LED
+	wire [9:0] LEDR;
+	--BUTTON
+	reg [3:0] KEY;
+	--CLOCKS
+	reg CLOCK_50
+
+top DUT  (.*);
+
+always #10 CLOCK_50 = -CLOCK_50;
+
+initial begin
+	SW = 0;
+	KEY = 0;
+	CLOCK_50 = 0;
+end
+
+endmodule
