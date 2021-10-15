@@ -22,7 +22,6 @@ signal	HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 :  std_logic_vector(6 downto 0);
 signal	LEDR :  std_logic_vector(9 downto 0);
 
 begin 
-instancia_testbench: testbench port map(SW=>SW, KEY=>KEY, CLOCK_50=>CLOCK_50,
-													HEX0=>HEX0, HEX1=>HEX1, HEX2=>HEX2, HEX3=>HEX3,
-													HEX4=>HEX4, HEX5=>HEX5, LEDR=>LEDR);
+instancia_testbench: testbench port map(SW=>SW, KEY=>KEY, CLOCK_50=>CLOCK_50, HEX0=>HEX0, HEX1=>HEX1, HEX2=>HEX2, HEX3=>HEX3,HEX4=>HEX4, HEX5=>HEX5, LEDR=>LEDR);
+CLOCK_50 <= not CLOCK_50 after 1 ms;
 end teste;
